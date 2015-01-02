@@ -1,0 +1,32 @@
+body {
+  color: grey;
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  font-size: 14pt;
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  background-color: #137bee;
+  color: white;
+  padding: 5px;
+  margin: 0 auto; }
+
+h2 {
+  background-color: #00178a;
+  color: white;
+  padding: 3px;
+  margin: 0 auto; }
+
+a {
+  color: #00178a; }
+
+header {
+  margin: 0 auto;
+  width: 60%; }
+
+.content {
+  width: 60%;
+  margin: 0 auto;
+  padding: 5px; }
+
+/*# sourceMappingURL=style.css.map */

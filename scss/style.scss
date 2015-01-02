@@ -1,0 +1,36 @@
+$primary:#137bee;
+$secondary:$primary - 100;
+$margin:0 auto;
+$padding:5px;
+
+body {
+  color:grey;
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
+  font-size:14pt;
+  margin:0;
+  padding:0;
+}
+h1 {
+  background-color:$primary;
+  color:white;
+  padding:$padding;
+  margin:$margin;
+}
+h2 {
+  background-color:$secondary;
+  color:white;
+  padding:$padding - 2px;
+  margin:$margin;
+}
+a {
+  color:$secondary;
+}
+header {
+  margin:$margin;
+  width:60%;
+}
+.content {
+  width:60%;
+  margin:$margin;
+  padding:$padding;
+}
