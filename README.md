@@ -26,6 +26,10 @@
  This will also create a new file called style.css, which is the compiled version of your style.scss file that will be readable by browsers.
  Sass is now watching your style.scss file, and will automatically compile and update style.css with your changes each time you save your .scss file.
 
+### Try your first compiles
+ Create a new rule in style.scss and save the document. Watch your command line window and see Sass compile it into style.css.
+ You should now see that style.css has been updated with the rule you created in the .scss file.  If you are in WebStorm and don't see it, right click on the file
+ and choose 'Synchronize', then you should be able to see it.
 
 
 
