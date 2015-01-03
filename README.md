@@ -5,7 +5,7 @@
 
 Check the branches for each day
 
-# Day 2: [Nesting Your Sass](http://leveluptuts.com/tutorials/sass-tutorials/3-nesting-your-sass)
+# Day 3: [Nesting Your Sass](http://leveluptuts.com/tutorials/sass-tutorials/3-nesting-your-sass)
 
 ## 1. Setup
  You can continue with the files you used in Day 2, with a couple of minor modifiations. (see branch Day_2)
