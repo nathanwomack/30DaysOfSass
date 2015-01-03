@@ -5,85 +5,31 @@
 
 Check the branches for each day
 
-# Day 4: [Using Mixins](http://leveluptuts.com/tutorials/sass-tutorials/4-using-mixins)
+# Day 5: [Selector Inheritance (@extend)](http://leveluptuts.com/tutorials/sass-tutorials/5-selector-inheritance)
 
 ## 1. Setup
- You can continue with the files you used in Day 3, with a couple of minor modifications. (see branch Day_3)
+ You can continue with the files you used in Day 4, with a couple of minor modifications. (see branch Day_4)
  
- Add a div around the first paragraph that has a class of intro.
+ Add a div around the second paragraph that has a class of feature, and add the paragraph1 class to the second paragraph.  I know, we named our classes poorly. We should do better next time. 
  
  ```
- <div class="intro">
+ <div class="feature">
    <p class="paragraph1">
    ...
    </p>
  </div>
 ```
 
-You'll also want to give the intro class a background color, and add a hover state to your link with a background color as well.  Notice that we're using the nesting technique we learned in the last lesson.
+## 2. Using @extend for Selector Inheritance
+Have you ever had a selector where you wanted all of the declarations for a rule you wrote for another selector, plus maybe one or two more? The @extend functionality of Sass helps you do that.
+
+Let's give the feature class all of the declarations from the intro class, plus add a border.  Remember to nest .feature inside of content, just like you did for .intro.
 
 ```
-.content {
-  ...
-  .intro {
-    background-color:lightblue + 25;
-    .paragraph1 {
-      color:$primary;
-      a {
-        font-size:16pt;
-        font-weight:bold;
-        color:magenta;
-      }
-      a:hover {
-        background:lightblue;
-      }
-    }
+.feature {
+    @extend .intro;
+    border:1px solid lightblue - 100;
   }
-}
 ```
 
- Start up sass from the command line:
- 
- ```
- sass --watch scss/style.scss:css/style.css
- ```
-
-## 2. What are mixins for, anyway?
-Mixins are kind of like variables for bigger chunks of css, plus they can accept arguments. You can use mixins for things that you don't want to have to do over and over and over, like border-radius.
-
-## 3. Writing a mixin
-In this example, we'll create a mixin for those pesky border-radii. We'll name it border-radius. We'll pass it an argument we'll call $radius, and we'll give $radius a default value of 20px. Inside the mixin, we'll use $radius for the values.
-
-```
-@mixin border-radius($radius: 20px) {
-  border-radius: $radius;
-  -moz-border-radius: $radius;
-  -webkit-border-radius: $radius;
-}
-```
-
-## 4. Using a mixin with defaults
-We can use that mixin in the rule for our .info selector by using @include followed by the name of the mixin:
-
-```
-...
-.intro {
-    @include border-radius;
-    padding:10px;
-...
-```
-
-## 5. Passing an argument to a mixin to override the defaults
-We can also pass the mixin an argument, similar to the way we pass an argument in javascript, to change the defaults. Here we'll override that 20px radius with a 10px radius.
-
-```
-...
-.intro {
-    @include border-radius(10px);
-    padding:10px;
-...
-```
-
-
-## 6. Extras
-Just for fun, try adding the mixin to the anchor. Or, if you're feeling really adventurous, try creating a mixin that takes two arguments AND uses your border-radius mixin!
+Now look at your compiled .css file.  See what that did there?  Everywhere there was a ruleset for .intro, it also added in .feature. You just saved a lotta typing.  You're getting rather clever. :)

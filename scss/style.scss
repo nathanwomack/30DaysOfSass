@@ -49,6 +49,7 @@ header {
     @include border-radius;
     padding:10px;
     background-color:lightblue + 25;
+    margin-top:5px;
     .paragraph1 {
       color:$primary;
       a {
@@ -61,5 +62,9 @@ header {
         background:lightblue;
       }
     }
+  }
+  .feature {
+    @extend .intro;
+    border:1px solid lightblue - 100;
   }
 }
