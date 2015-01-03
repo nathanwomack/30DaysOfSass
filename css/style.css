@@ -28,5 +28,13 @@ header {
   width: 60%;
   margin: 0 auto;
   padding: 5px; }
+  .content h2 {
+    background-color: #3249bc; }
+  .content .paragraph1 {
+    color: #137bee; }
+    .content .paragraph1 a {
+      font-size: 16pt;
+      font-weight: bold;
+      color: magenta; }
 
 /*# sourceMappingURL=style.css.map */

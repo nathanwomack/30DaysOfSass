@@ -33,4 +33,15 @@ header {
   width:60%;
   margin:$margin;
   padding:$padding;
+  h2 {
+    background-color:$secondary + 50;
+  }
+  .paragraph1 {
+    color:$primary;
+    a {
+      font-size:16pt;
+      font-weight:bold;
+      color:magenta;
+    }
+  }
 }
