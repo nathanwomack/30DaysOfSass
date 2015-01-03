@@ -1,12 +1,47 @@
-.circle {display:block; background:#333}
-.triangle {display:block}
-
-.ir {
+@mixin ir {
   font: 0/0 a;
   text-shadow: none;
   color: transparent;
+  display:block;
 }
 
-.clearfix:before, .clearfix:after {content:""; display:table}
-.clearfix:after {clear:both}
-.clearfix {zoom:1}
+@mixin circle($size,$color) {
+  @include ir;
+  -webkit-border-radius: $size/2;
+  -moz-border-radius: $size/2;
+  border-radius: $size/2;
+  height:$size;
+  width:$size;
+  background-color:$color;
+}
+
+@mixin triangle($size,$direction,$color) {
+  @include ir;
+  @if $direction == 'up' {
+    width:0;
+    height:0;
+    border-left:$size/2 solid transparent;
+    border-right:$size/2 solid transparent;
+    border-bottom:$size/2 solid $color;
+  } @elseif $direction == 'down' {
+    width:0;
+    height:0;
+    border-left:$size/2 solid transparent;
+    border-right:$size/2 solid transparent;
+    border-top:$size/2 solid $color;
+  } @elseif $direction == 'right' {
+    width:0;
+    height:0;
+    border-top:$size/2 solid transparent;
+    border-bottom:$size/2 solid transparent;
+    border-left:$size/2 solid $color;
+  } @elseif $direction == 'left' {
+    width:0;
+    height:0;
+    border-top:$size/2 solid transparent;
+    border-bottom:$size/2 solid transparent;
+    border-right:$size/2 solid $color;
+  }
+}
+.circle {@include circle(100px,#333)}
+.triangle {@include triangle(100px,'right',#333)}

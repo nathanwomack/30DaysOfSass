@@ -1,23 +1,24 @@
 .circle {
-  display: block;
-  background: #333; }
-
-.triangle {
-  display: block; }
-
-.ir {
   font: 0/0 a;
   text-shadow: none;
-  color: transparent; }
+  color: transparent;
+  display: block;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  height: 100px;
+  width: 100px;
+  background-color: #333; }
 
-.clearfix:before, .clearfix:after {
-  content: "";
-  display: table; }
-
-.clearfix:after {
-  clear: both; }
-
-.clearfix {
-  zoom: 1; }
+.triangle {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+  display: block;
+  width: 0;
+  height: 0;
+  border-top: 50px solid transparent;
+  border-bottom: 50px solid transparent;
+  border-left: 50px solid #333; }
 
 /*# sourceMappingURL=style2.css.map */
