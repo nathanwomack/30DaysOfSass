@@ -8,7 +8,10 @@ $padding:5px;
   -moz-border-radius: $radius;
   -webkit-border-radius: $radius;
 }
-
+@mixin roundedRect($radius: 10px, $background-color: silver) {
+  @include border-radius($radius);
+  background-color:$background-color;
+}
 body {
   color:grey;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
@@ -40,7 +43,7 @@ header {
   margin:$margin;
   padding:$padding;
   h2 {
-    background-color:$secondary + 50;
+    @include roundedRect(10px, pink);
   }
   .intro {
     @include border-radius;
@@ -54,6 +57,7 @@ header {
         color:magenta;
       }
       a:hover {
+        @include border-radius(5px);
         background:lightblue;
       }
     }

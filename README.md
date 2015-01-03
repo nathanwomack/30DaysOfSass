@@ -84,3 +84,6 @@ We can also pass the mixin an argument, similar to the way we pass an argument i
 ```
 
 ```
+
+## 6. Extras
+Just for fun, try adding the mixin to the anchor. Or, if you're feeling really adventurous, try creating a mixin that takes two arguments AND uses your border-radius mixin!

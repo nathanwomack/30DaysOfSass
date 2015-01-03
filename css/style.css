@@ -29,7 +29,10 @@ header {
   margin: 0 auto;
   padding: 5px; }
   .content h2 {
-    background-color: #3249bc; }
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    background-color: pink; }
   .content .intro {
     border-radius: 20px;
     -moz-border-radius: 20px;
@@ -43,6 +46,9 @@ header {
         font-weight: bold;
         color: magenta; }
       .content .intro .paragraph1 a:hover {
+        border-radius: 5px;
+        -moz-border-radius: 5px;
+        -webkit-border-radius: 5px;
         background: lightblue; }
 
 /*# sourceMappingURL=style.css.map */
