@@ -3,6 +3,12 @@ $secondary:$primary - 100;
 $margin:0 auto;
 $padding:5px;
 
+@mixin border-radius($radius: 20px) {
+  border-radius: $radius;
+  -moz-border-radius: $radius;
+  -webkit-border-radius: $radius;
+}
+
 body {
   color:grey;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
@@ -36,12 +42,20 @@ header {
   h2 {
     background-color:$secondary + 50;
   }
-  .paragraph1 {
-    color:$primary;
-    a {
-      font-size:16pt;
-      font-weight:bold;
-      color:magenta;
+  .intro {
+    @include border-radius;
+    padding:10px;
+    background-color:lightblue + 25;
+    .paragraph1 {
+      color:$primary;
+      a {
+        font-size:16pt;
+        font-weight:bold;
+        color:magenta;
+      }
+      a:hover {
+        background:lightblue;
+      }
     }
   }
 }

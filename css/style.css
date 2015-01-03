@@ -30,11 +30,19 @@ header {
   padding: 5px; }
   .content h2 {
     background-color: #3249bc; }
-  .content .paragraph1 {
-    color: #137bee; }
-    .content .paragraph1 a {
-      font-size: 16pt;
-      font-weight: bold;
-      color: magenta; }
+  .content .intro {
+    border-radius: 20px;
+    -moz-border-radius: 20px;
+    -webkit-border-radius: 20px;
+    padding: 10px;
+    background-color: #c6f1ff; }
+    .content .intro .paragraph1 {
+      color: #137bee; }
+      .content .intro .paragraph1 a {
+        font-size: 16pt;
+        font-weight: bold;
+        color: magenta; }
+      .content .intro .paragraph1 a:hover {
+        background: lightblue; }
 
 /*# sourceMappingURL=style.css.map */
