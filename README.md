@@ -5,7 +5,7 @@
 
 Check the branches for each day
 
-# Day 6: [Creating Configurable Shapes Using Mixins](http://leveluptuts.com/tutorials/sass-tutorials/6-creating-configurable-shapes-using-mixins)
+# Day 6: [Creating Configurable Shapes Using Mixins and @if logic](http://leveluptuts.com/tutorials/sass-tutorials/6-creating-configurable-shapes-using-mixins)
 
 ## 1. Setup
 Today we've got a new index.html file. Replace your current index.html with this:
