@@ -5,6 +5,7 @@
 
 
 # Day 1: [How to install Sass](http://leveluptuts.com/tutorials/sass-tutorials/1-how-install-sass)
+How this all works.  If you want to, you can just watch the video linked above at leveluptuts.com. Or, if you're more of a reader than a watcher, I've recapped the video tutorials here, and added a few thoughts of my own. Keep in mind that I kind of named things differently, etc. so if you're trying to watch the video AND do these walkthroughs at the same time, you might get a bit confused. 
 
 ## Install Ruby
  Check to see if you have Ruby installed by opening up a command line and typing `ruby -v`.  If you don't have it, [install it](http://rubyinstaller.org/).
