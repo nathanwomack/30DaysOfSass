@@ -71,6 +71,7 @@ We can use that mixin in the rule for our .info selector by using @include follo
     @include border-radius;
     padding:10px;
 ...
+```
 
 ## 5. Passing an argument to a mixin to override the defaults
 We can also pass the mixin an argument, similar to the way we pass an argument in javascript, to change the defaults. Here we'll override that 20px radius with a 10px radius.
