@@ -5,31 +5,51 @@
 
 Check the branches for each day
 
-# Day 5: [Selector Inheritance (@extend)](http://leveluptuts.com/tutorials/sass-tutorials/5-selector-inheritance)
+# Day 6: [Creating Configurable Shapes Using Mixins](http://leveluptuts.com/tutorials/sass-tutorials/6-creating-configurable-shapes-using-mixins)
 
 ## 1. Setup
- You can continue with the files you used in Day 4, with a couple of minor modifications. (see branch Day_4)
- 
- Add a div around the second paragraph that has a class of feature, and add the paragraph1 class to the second paragraph.  I know, we named our classes poorly. We should do better next time. 
+Today we've got a new index.html file. Replace your current index.html with this:
+
  
  ```
- <div class="feature">
-   <p class="paragraph1">
-   ...
-   </p>
- </div>
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>SASS is Nice</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <header>
+        <h1>Making Shapes</h1>
+    </header>
+    <div class="content">
+        <a class="circle ir" href="#">Circle</a>
+        <a class="triangle ir" href="#">Triangle</a>
+    </div>
+</body>
+</html>
 ```
 
-## 2. Using @extend for Selector Inheritance
-Have you ever had a selector where you wanted all of the declarations for a rule you wrote for another selector, plus maybe one or two more? The @extend functionality of Sass helps you do that.
-
-Let's give the feature class all of the declarations from the intro class, plus add a border.  Remember to nest .feature inside of content, just like you did for .intro.
+And you'll notice we're using a new stylesheet, so you'll want to create style2.scss with this. What's that weird font declaration on the ir (image replacement) class?  It's shorthand for setting font size to 0, line height to 0, and assigning a non-existent font named "a". Basically, the text in elements with this class won't display in the browser.
 
 ```
-.feature {
-    @extend .intro;
-    border:1px solid lightblue - 100;
-  }
+.circle {display:block; background:#333}
+.triangle {display:block}
+
+.ir {
+  font: 0/0 a;
+  text-shadow: none;
+  color: transparent;
+}
+
+.clearfix:before, .clearfix:after {content:""; display:table}
+.clearfix:after {clear:both}
+.clearfix {zoom:1}
 ```
 
-Now look at your compiled .css file.  See what that did there?  Everywhere there was a ruleset for .intro, it also added in .feature. You just saved a lotta typing.  You're getting rather clever. :)
+And most importantly, let's restart our sass watcher. This time, let's tell it to watch all files in the scss directory and output them to the css directory:
+
+```
+sass --watch scss:css
+```
