@@ -112,4 +112,5 @@ Add the triangle mixin to the .triangle anchor. Pass in the size, direction and 
 .triangle {display:block; @include triangle(100px,'up',#333)}
 ```
 
-## 6. Extras - during setup, we did some repeating. How could you use Sass to avoid repetition in your scss file and extra classes in your html?  hint: what can you do with .ir?
+## 6. Extras
+During setup, we did some repeating. How could you use Sass to avoid repetition in your scss file and extra classes in your html?  hint: what can you do with .ir?
