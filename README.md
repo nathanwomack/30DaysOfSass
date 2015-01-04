@@ -5,28 +5,58 @@
 
 Check the branches for each day
 
-# Day 7 [@import and Parent Reference](http://leveluptuts.com/tutorials/sass-tutorials/7-import-parent-reference)
+# Day 8 [Using Lists and @each](http://leveluptuts.com/tutorials/sass-tutorials/8-using-lists-and-each)
 How this all works:  If you want to, you can just watch the video linked above at leveluptuts.com. Or, if you're more of a reader than a watcher, I've recapped the video tutorials here, and added a few thoughts of my own. Keep in mind that I kind of named things differently, etc. so if you're trying to watch the video AND do these walkthroughs at the same time, you might get a bit confused. You don't need to grab all the files - the files for each branch are the completed lesson files. So unless you get stuck, you shouldn't need to snag everything, just read the README and follow along.
 
 ## 1. Setup
-Today we'll be building on the files we used in previous lessons. You'll need to rename your style.scss file to "_style.scss"
-
-## 2. @import
-First, we'll import our _style.scss file into our style2.scss file. Using separate files and the @import functionality allows you to organize your stylesheets. You may want to keep all your mixins in one file, or all your variables in another. How you organize is up to you, but @import makes it easier.  Notice that we don't use the underscore or the .scss in the filename when we import. The semi-colon is also important, the watcher will error without it. Here's what you'll add to the top of your style2.scss file:
+Today we'll be building on the files we used in previous lessons. We'll want to use the same html we used in the first 5 lessons, so I copied the index.html from Day 5 into a new file I called index2.html. We'll also make a couple of other changes. First, change the stylesheet to point at style2.css instead of style.css.  Second, add this list of social links to your header:
 
 ```
-@import "style";
+<ul class="socialLinks">
+    <li><a class="twitter" href="#">Twitter</a></li>
+    <li><a class="facebook" href="#">Facebook</a></li>
+    <li><a class="youtube" href="#">YouTube</a></li>
+    <li><a class="rss" href="#">RSS</a></li>
+</ul>
 ```
 
-When you look at your newly compiled style2.css file, you'll see it now has all the style rules from _style.scss as well. You'll also notice that the watcher did not generate a _style.css file. That's because it has an underscore, and will only be used for imports.
-
-## 3. Parent Reference
-Let's make our circle change colors on hover. Rather than create a separate ruleset for hover, we're going to use a shortcut and nest the hover inside our circle class, like this using an ampersand:
-
+We also need to add a bit of css to our style2.scss file:
 ```
-.circle
-  {@include circle(100px,#333);
-  &:hover {background:red;}
+ul.socialLinks {
+  display:block;
+  overflow:hidden;
+  li {
+    list-style: none;
+    a {
+      display: block;
+      float: left;
+      margin-right:5px;
+      height: 32px;
+      width: 32px;
+    }
+  }
 }
 ```
 
+I also created an img directory and added an icon for each list item into it. These icons are a little bit, but I was too lazy to photoshop, and for this example we'll just resize with css. Not a best practice, I know. If you wanna resize them properly, feel free. The images are: twitter.png, facebook.png, youtube.png, and rss.png.
+
+## 2. Lists
+Let's declare list called icons.
+```
+$icons: (twitter,facebook,youtube,rss);
+```
+
+## 3. @each
+Now we're going to use @each to loop through that list and create a ruleset for each icon in the list.
+We create a new variable we call $social, and for each item in the list, we create a new ruleset where #{$social} will be replaced with an item in the list.
+```
+  @each $social in $icons {
+    .#{$social} {
+      background: url('../img/#{$social}.png') no-repeat;
+      background-size:32px;
+      text-indent:-999px;
+    }
+  }
+```
+
+Now check out your style2.css file. You can see that Sass generated a ruleset for each icon.

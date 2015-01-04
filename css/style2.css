@@ -79,4 +79,36 @@ header {
   border-bottom: 50px solid transparent;
   border-left: 50px solid #333; }
 
+ul.socialLinks {
+  display: block;
+  overflow: hidden; }
+  ul.socialLinks li {
+    list-style: none; }
+    ul.socialLinks li a {
+      display: block;
+      float: left;
+      margin-right: 5px;
+      height: 32px;
+      width: 32px; }
+
+.twitter {
+  background: url("../img/twitter.png") no-repeat;
+  background-size: 32px;
+  text-indent: -999px; }
+
+.facebook {
+  background: url("../img/facebook.png") no-repeat;
+  background-size: 32px;
+  text-indent: -999px; }
+
+.youtube {
+  background: url("../img/youtube.png") no-repeat;
+  background-size: 32px;
+  text-indent: -999px; }
+
+.rss {
+  background: url("../img/rss.png") no-repeat;
+  background-size: 32px;
+  text-indent: -999px; }
+
 /*# sourceMappingURL=style2.css.map */

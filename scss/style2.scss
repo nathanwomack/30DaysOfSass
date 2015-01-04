@@ -50,3 +50,27 @@
   &:hover {background:red;}
 }
 .triangle {@include triangle(100px,'right',#333)}
+
+ul.socialLinks {
+  display:block;
+  overflow:hidden;
+  li {
+    list-style: none;
+    a {
+      display: block;
+      float: left;
+      margin-right:5px;
+      height: 32px;
+      width: 32px;
+    }
+  }
+}
+
+$icons: (twitter,facebook,youtube,rss);
+@each $social in $icons {
+  .#{$social} {
+    background: url('../img/#{$social}.png') no-repeat;
+    background-size:32px;
+    text-indent:-999px;
+  }
+}
