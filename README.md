@@ -6,6 +6,7 @@
 Check the branches for each day
 
 # Day 5: [Selector Inheritance (@extend)](http://leveluptuts.com/tutorials/sass-tutorials/5-selector-inheritance)
+How this all works:  If you want to, you can just watch the video linked above at leveluptuts.com. Or, if you're more of a reader than a watcher, I've recapped the video tutorials here, and added a few thoughts of my own. Keep in mind that I kind of named things differently, etc. so if you're trying to watch the video AND do these walkthroughs at the same time, you might get a bit confused. You don't need to grab all the files - the files for each branch are the completed lesson files. So unless you get stuck, you shouldn't need to snag everything, just read the README and follow along.
 
 ## 1. Setup
  You can continue with the files you used in Day 4, with a couple of minor modifications. (see branch Day_4)
