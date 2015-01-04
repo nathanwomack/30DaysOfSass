@@ -38,7 +38,7 @@ ul.socialLinks {
 }
 ```
 
-I also created an img directory and added an icon for each list item into it. These icons are a little bit, but I was too lazy to photoshop, and for this example we'll just resize with css. Not a best practice, I know. If you wanna resize them properly, feel free. The images are: twitter.png, facebook.png, youtube.png, and rss.png.
+I also created an img directory and added an icon for each list item into it. These icons are a little big, but I was too lazy to photoshop, and for this example we'll just resize with css. Not a best practice, I know. If you wanna resize them properly, feel free. The images are: twitter.png, facebook.png, youtube.png, and rss.png.
 
 ## 2. Lists
 Let's declare list called icons.
