@@ -5,112 +5,27 @@
 
 Check the branches for each day
 
-# Day 6: [Creating Configurable Shapes Using Mixins](http://leveluptuts.com/tutorials/sass-tutorials/6-creating-configurable-shapes-using-mixins)
+# Day 7 [@import and Parent Reference](http://leveluptuts.com/tutorials/sass-tutorials/7-import-parent-reference)
 
 ## 1. Setup
-Today we've got a new index.html file. Replace your current index.html with this:
+Today we'll be building on the files we used in previous lessons. You'll need to rename your style.scss file to "_style.scss"
 
- 
- ```
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>SASS is Nice</title>
-    <link rel="stylesheet" href="css/style2.css">
-</head>
-<body>
-    <header>
-        <h1>Making Shapes</h1>
-    </header>
-    <div class="content">
-        <a class="circle ir" href="#">Circle</a>
-        <a class="triangle ir" href="#">Triangle</a>
-    </div>
-</body>
-</html>
-```
-
-And you'll notice we're using a new stylesheet, so you'll want to create style2.scss with this. What's that weird font declaration on the ir (image replacement) class?  It's shorthand for setting font size to 0, line height to 0, and assigning a non-existent font named "a". Basically, the text in elements with this class won't display in the browser.
+## 2. @import
+First, we'll import our _style.scss file into our style2.scss file. Using separate files and the @import functionality allows you to organize your stylesheets. You may want to keep all your mixins in one file, or all your variables in another. How you organize is up to you, but @import makes it easier.  Notice that we don't use the underscore or the .scss in the filename when we import. The semi-colon is also important, the watcher will error without it. Here's what you'll add to the top of your style2.scss file:
 
 ```
-.circle {display:block}
-.triangle {display:block}
+@import "style";
+```
 
-.ir {
-  font: 0/0 a;
-  text-shadow: none;
-  color: transparent;
+When you look at your newly compiled style2.css file, you'll see it now has all the style rules from _style.scss as well. You'll also notice that the watcher did not generate a _style.css file. That's because it has an underscore, and will only be used for imports.
+
+## 3. Parent Reference
+Let's make our circle change colors on hover. Rather than create a separate ruleset for hover, we're going to use a shortcut and nest the hover inside our circle class, like this using an ampersand:
+
+```
+.circle
+  {@include circle(100px,#333);
+  &:hover {background:red;}
 }
 ```
 
-And most importantly, let's restart our sass watcher. This time, let's tell it to watch all files in the scss directory and output them to the css directory:
-
-```
-sass --watch scss:css
-```
-
-## 2. Creating the circle mixin
-Let's create a new mixin called circle that accepts a size argument and a color argument. We won't worry about setting defaults this time, but you can if you want to. What this mixin is doing is creating a circle by creating a border radius that is half the size of the height and width.
-
-
-```
-@mixin circle($size,$color) {
-  -webkit-border-radius: $width/2;
-  -moz-border-radius: $width/2;
-  border-radius: $width/2;
-  height:$width;
-  width:$width;
-  background-color:$color;
-}
-```
-
-## 3. Use the circle mixin
-Add the circle mixin to the .circle anchor. Pass in the width and color that you want your circle to be.
-
-```
-.circle {display:block; @include circle(100px,#333)}
-```
-
-## 4.  Creating the triangle mixin
-Now let's create the triangle mixin. We want to make it flexible, so let's give it size, direction and color arguments. By setting the borders to half the size we want, and setting the borders on two sides transparent, the borders will form a nice little triangle.
-
-```
-@mixin triangle($size,$direction,$color) {
-  @if $direction == 'up' {
-    width:0;
-    height:0;
-    border-left:$size/2 solid transparent;
-    border-right:$size/2 solid transparent;
-    border-bottom:$size/2 solid $color;
-  } @elseif $direction == 'down' {
-    width:0;
-    height:0;
-    border-left:$size/2 solid transparent;
-    border-right:$size/2 solid transparent;
-    border-top:$size/2 solid $color;
-  } @elseif $direction == 'right' {
-    width:0;
-    height:0;
-    border-top:$size/2 solid transparent;
-    border-bottom:$size/2 solid transparent;
-    border-left:$size/2 solid $color;
-  } @elseif $direction == 'left' {
-    width:0;
-    height:0;
-    border-top:$size/2 solid transparent;
-    border-bottom:$size/2 solid transparent;
-    border-right:$size/2 solid $color;
-  }
-}
-```
-
-## 5. Use the triangle mixin
-Add the triangle mixin to the .triangle anchor. Pass in the size, direction and color that you want your triangle to have.
-
-```
-.triangle {display:block; @include triangle(100px,'up',#333)}
-```
-
-## 6. Extras
-During setup, we did some repeating. How could you use Sass to avoid repetition in your scss file and extra classes in your html?  hint: what can you do with .ir?

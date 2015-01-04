@@ -1,3 +1,5 @@
+@import "style";
+
 @mixin ir {
   font: 0/0 a;
   text-shadow: none;
@@ -43,5 +45,8 @@
     border-right:$size/2 solid $color;
   }
 }
-.circle {@include circle(100px,#333)}
+.circle
+  {@include circle(100px,#333);
+  &:hover {background:red;}
+}
 .triangle {@include triangle(100px,'right',#333)}
