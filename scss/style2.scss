@@ -74,3 +74,17 @@ $icons: (twitter,facebook,youtube,rss);
     text-indent:-999px;
   }
 }
+
+@each $p in (
+  one: black,
+  two: black + 40,
+  three: black + 80,
+  four:black + 120
+) {
+  .#{nth($p,1)} {
+    background:#{nth($p,2)};
+    @include border-radius(10px);
+    padding:10px;
+    color:#fff;
+  }
+}

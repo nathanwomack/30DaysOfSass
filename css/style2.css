@@ -33,26 +33,24 @@ header {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     background-color: pink; }
-  .content .intro, .content .feature {
+  .content .intro {
     border-radius: 20px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
     padding: 10px;
     background-color: #c6f1ff;
     margin-top: 5px; }
-    .content .intro .paragraph1, .content .feature .paragraph1 {
+    .content .intro .paragraph1 {
       color: #137bee; }
-      .content .intro .paragraph1 a, .content .feature .paragraph1 a {
+      .content .intro .paragraph1 a {
         font-size: 16pt;
         font-weight: bold;
         color: magenta; }
-      .content .intro .paragraph1 a:hover, .content .feature .paragraph1 a:hover {
+      .content .intro .paragraph1 a:hover {
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         background: lightblue; }
-  .content .feature {
-    border: 1px solid #497482; }
 
 .circle {
   font: 0/0 a;
@@ -110,5 +108,37 @@ ul.socialLinks {
   background: url("../img/rss.png") no-repeat;
   background-size: 32px;
   text-indent: -999px; }
+
+.one {
+  background: black;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  color: #fff; }
+
+.two {
+  background: #282828;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  color: #fff; }
+
+.three {
+  background: #505050;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  color: #fff; }
+
+.four {
+  background: #787878;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  color: #fff; }
 
 /*# sourceMappingURL=style2.css.map */
