@@ -45,7 +45,7 @@ So, for each map item, we're going to create a ruleset that uses the first value
 Notice anything weird??  *Sass indexes start at 1, not zero.*  So if you wanted to grab the 3rd item in list z, your sass would be:
 
 ```
-$z
+$z: (one,two,three);
 nth($z,3)
 ```
 
