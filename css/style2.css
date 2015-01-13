@@ -33,24 +33,27 @@ header {
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     background-color: pink; }
-  .content .intro {
+  .content .intro, .content .feature {
     border-radius: 20px;
     -moz-border-radius: 20px;
     -webkit-border-radius: 20px;
-    padding: 10px;
-    background-color: #c6f1ff;
-    margin-top: 5px; }
-    .content .intro .paragraph1 {
+    background-color: rgba(255, 0, 0, 0.5);
+    width: 38%;
+    float: left; }
+    .content .intro .paragraph1, .content .feature .paragraph1 {
       color: #137bee; }
-      .content .intro .paragraph1 a {
+      .content .intro .paragraph1 a, .content .feature .paragraph1 a {
         font-size: 16pt;
         font-weight: bold;
         color: magenta; }
-      .content .intro .paragraph1 a:hover {
+      .content .intro .paragraph1 a:hover, .content .feature .paragraph1 a:hover {
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         background: lightblue; }
+  .content .feature {
+    width: 62%;
+    float: right; }
 
 .circle {
   font: 0/0 a;
