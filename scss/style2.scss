@@ -88,3 +88,11 @@ $icons: (twitter,facebook,youtube,rss);
     color:#fff;
   }
 }
+
+@function text-contrast($background, $value) {
+  @return ($background + $value);
+}
+
+.one {
+  color: text-contrast(black, 120);
+}
