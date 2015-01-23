@@ -32,7 +32,7 @@ background-color: rgba(198, 241, 255, 0.3);
 ```
 
 
-## 2. fade-out Function
+## 3. fade-out Function
 The fade-out function is similar. It also accepts two arguments, a color value and an alpha value, and turns it into an rgba value. Let's try it with the background color for .intro in _style.scss.  Let's try a new color red, and we'll use an alpha of .5:
 ```
 background-color:fade-out(red,.5);
@@ -43,7 +43,7 @@ After the watcher compiles the css, you'll be able to view the change in the bro
 background-color: rgba(255, 0, 0, 0.5);
 ```
 
-## 3. percentage Function
+## 4. percentage Function
 Percentage is useful for taking pixel units and translating them into percentages for fluid layouts. For example, if a designer gives you a layout that is 1440px wide.  The design has a left sidebar that needs to be 550px, and the main content area should be 890px wide.  You want the layout to be fluid, but still retain the proportions given to you by the designer.  Let's try this out with our .intro and .feature selectors.  In _style.css, add a width to .intro using the percentage function like this:
 ```
 width: percentage(550px/1440px);
@@ -65,7 +65,7 @@ Now try adding a new ruleset for .feature like so:
 
 You may need to remove some margins or padding to get them to align properly next to each other, but you get the idea.
 
-## 4. Nesting functions
+## 5. Nesting functions
 You can also nest functions.  If you have an aversion to lots of decimal points, you could always wrap your percentage function in a round function:
 
 ```
@@ -77,5 +77,5 @@ Which produces this:
 width: 38%;
 ```
 
-## 5. Extras
+## 6. Extras
 [Check out all the internal Sass functions here](http://sass-lang.com/documentation/Sass/Script/Functions.html) and run some experiments of your own!
