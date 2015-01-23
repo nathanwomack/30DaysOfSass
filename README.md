@@ -5,34 +5,49 @@
 
 Check the branches for each day
 
-# Day 1 [Build Your Own Function](http://leveluptuts.com/tutorials/sass-tutorials/11-build-your-own-function)
+# Day 1 [Build Your Own Function Part 2: If/Else](http://leveluptuts.com/tutorials/sass-tutorials/12-build-your-own-function-part-2-if-else)
 How this all works:  If you want to, you can just watch the video linked above at leveluptuts.com. Or, if you're more of a reader than a watcher, I've recapped the video tutorials here, and added a few thoughts of my own. Keep in mind that I kind of named things differently, etc. so if you're trying to watch the video AND do these walkthroughs at the same time, you might get a bit confused. You don't need to grab all the files - the files for each branch are the completed lesson files. So unless you get stuck, you shouldn't need to snag everything, just read the README and follow along.
 
 ## 1. Setup
-No setup today, you can use the files you have that you created in Day_10.
+No setup today, you can use the files you have that you created in Day_11.
 
 
-## 2. Creating a function
-We're going to create a super simple function that will return a lightened value of a color.  In style2.scss, we're going to add a function that will take two arguments, background and value. We'll return the sum of those two arguments.
+## 2. Updating the text-contrast Function
+We're going to modify our text-contrast function we wrote in the last lesson. Eventually, we're going to use some if/else logic so that it will create a nice contrast based on how light or dark the background is. First, let's update what we did last time to use that built in lighten function we mentioned in the note at the end of the last lesson.  It only needs one argument, so we're going to drop the value argument, use the lighten function,and update the rule for our .one class so it only passes one argument.
+
 ```
-@function text-contrast($background, $value) {
-  @return ($background + $value);
+@function text-contrast($background) {
+  @return lighten($background,70);
+}
+.one {
+  color: text-contrast(black);
 }
 ```
 
 
-## 3. Using the function
-Let's try this out on our .one paragraph.
+## 3. Using if/else
+Now we're going change our text-contrast function using the built in lightness function, which tells us the lightness percentage of a color, and use if logic to determine whether we should lighten or darken the text color accordingly.
 ```
-.one {
-  color: text-contrast(black, 120);
+@function text-contrast($background) {
+  @if lightness($background) < 50% {
+    @return lighten($background,70%);
+  } @else {
+    @return darken($background,70%);
+  }
 }
 ```
 
-After the watcher compiles the css, you'll be able to view the change in the browser, and also see that in the Style2.css file, the value is now represented as a hex value:
+To test it out, change the css for the .one selector to be white instead of black.  Remember, we've got css for that in a couple of places.  Here:
 ```
 .one {
-  color: #787878; }
+  color: text-contrast(white);
+}
+```
+and here in that @each loop we wrote a while back:
+```
+@each $p in (
+  one: white,
 ```
 
-Note: There's already a similar built in function called lighten.  We'll build more useful functions in the next lesson.
+## Extras
+For fun, try out other colors.  Next lesson we'll incorporate this into our @each loop to make it even more useful.

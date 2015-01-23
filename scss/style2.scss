@@ -76,7 +76,7 @@ $icons: (twitter,facebook,youtube,rss);
 }
 
 @each $p in (
-  one: black,
+  one: white,
   two: black + 40,
   three: black + 80,
   four:black + 120
@@ -85,14 +85,18 @@ $icons: (twitter,facebook,youtube,rss);
     background:#{nth($p,2)};
     @include border-radius(10px);
     padding:10px;
-    color:#fff;
+    color:text-contrast(#{nth($p,2)});
   }
 }
 
-@function text-contrast($background, $value) {
-  @return ($background + $value);
+@function text-contrast($background) {
+  @if lightness($background) < 50% {
+    @return lighten($background,70%);
+  } @else {
+    @return darken($background,70%);
+  }
 }
 
 .one {
-  color: text-contrast(black, 120);
+  color: text-contrast(white);
 }
