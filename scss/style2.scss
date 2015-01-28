@@ -81,23 +81,37 @@ $icons: (twitter,facebook,youtube,rss);
     @return darken($background,70%);
   }
 }
-@each $p in (
-  one: red + 100,
-  two: red + 50,
-  three: red - 50,
-  four: red - 100
-) {
-  .#{nth($p,1)} {
-    background:#{nth($p,2)};
+//@each $p in (
+//  one: red + 100,
+//  two: red + 50,
+//  three: red - 50,
+//  four: red - 100
+//) {
+//  .#{nth($p,1)} {
+//    background:#{nth($p,2)};
+//    @include border-radius(10px);
+//    padding:10px;
+//    color:text-contrast(nth($p,2));
+//  }
+//}
+
+$i : 1;
+$parbg : darkred;
+@while $i < 5 {
+  .par-#{$i} {
+    margin: 10px * $i;
+    background-color:$parbg;
     @include border-radius(10px);
     padding:10px;
-    color:text-contrast(nth($p,2));
+    color:text-contrast($parbg);
+    $parbg : lighten($parbg, 20%);
+
   }
+  $i : $i + 1;
 }
 
-
-@for $i from 1 through 4 {
-  .par-#{$i} {
-    margin:10px * $i;
-  }
-}
+//@for $i from 1 through 4 {
+//  .par-#{$i} {
+//    margin:10px * $i;
+//  }
+//}
