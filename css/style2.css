@@ -118,7 +118,7 @@ ul.socialLinks {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   padding: 10px;
-  color: text-contrast(white); }
+  color: white; }
 
 .two {
   background: #282828;
@@ -126,7 +126,7 @@ ul.socialLinks {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   padding: 10px;
-  color: text-contrast(#282828); }
+  color: white; }
 
 .three {
   background: #505050;
@@ -134,7 +134,7 @@ ul.socialLinks {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   padding: 10px;
-  color: text-contrast(#505050); }
+  color: white; }
 
 .four {
   background: #787878;
@@ -142,7 +142,7 @@ ul.socialLinks {
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   padding: 10px;
-  color: text-contrast(#787878); }
+  color: white; }
 
 .one {
   color: #4d4d4d; }
