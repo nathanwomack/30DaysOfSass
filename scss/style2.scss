@@ -74,21 +74,6 @@ $icons: (twitter,facebook,youtube,rss);
     text-indent:-999px;
   }
 }
-
-@each $p in (
-  one: white,
-  two: black + 40,
-  three: black + 80,
-  four:black + 120
-) {
-  .#{nth($p,1)} {
-    background:#{nth($p,2)};
-    @include border-radius(10px);
-    padding:10px;
-    color:text-contrast(#{nth($p,2)});
-  }
-}
-
 @function text-contrast($background) {
   @if lightness($background) < 50% {
     @return lighten($background,70%);
@@ -96,7 +81,17 @@ $icons: (twitter,facebook,youtube,rss);
     @return darken($background,70%);
   }
 }
-
-.one {
-  color: text-contrast(white);
+@each $p in (
+  one: red + 100,
+  two: red + 50,
+  three: red - 50,
+  four: red - 100
+) {
+  .#{nth($p,1)} {
+    background:#{nth($p,2)};
+    @include border-radius(10px);
+    padding:10px;
+    color:text-contrast(nth($p,2));
+  }
 }
+
