@@ -16,6 +16,7 @@ One minor change today - you can delete the ruleset you create in style2.scss fo
 Today we're going to use our text-contrast function inside our @each loop.
 First, I updated the list.  I decided to go with some different reds today.  Feel free to use other colors if you'd like.
 Second, I updated the color rule to use our text-contrast function.
+Note: if you're text-contrast function isn't compiling properly, make sure that your function is higher up in the code than the place that you are calling it.
 
 ```
 @each $p in (
