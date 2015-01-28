@@ -94,3 +94,10 @@ $icons: (twitter,facebook,youtube,rss);
     color:text-contrast(nth($p,2));
   }
 }
+
+
+@for $i from 1 through 4 {
+  .par-#{$i} {
+    margin:10px * $i;
+  }
+}
