@@ -93,4 +93,4 @@ $parbg : darkred;
 ```
 
 ## Extras
-Think of a better way to use for loops than naming your paragraphs like this.  :P
+Getting more useful, yes? Play around with the stuff you've learned.
