@@ -13,4 +13,4 @@ How this all works:  If you want to, you can just watch the video linked above a
 So, the LevelUpTuts Day 18 video is all about updating Sass...to a version that is already older than the one you are using if you started at Day 1 from this repo. 
 Which means:  YOU GET THE DAY OFF! Go grab some coffee and check your favorite social media feed for ten minutes instead. :)
 
-but... if you really want to know how to update your version of Sass, because someday you might need to do that...basically, you just reinstall the sass gem - so go peek at (Day 1)[https://github.com/stuller/30DaysOfSass/tree/Day_1]!
+but... if you really want to know how to update your version of Sass, because someday you might need to do that...basically, you just reinstall the sass gem - so go peek at the Day_1 branch!
