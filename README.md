@@ -5,92 +5,35 @@
 
 Check the branches for each day
 
-# Day 16 [While Loops](http://leveluptuts.com/tutorials/sass-tutorials/16-while-loops)
+# Day 17 [Using LiveReload](http://leveluptuts.com/tutorials/sass-tutorials/17-using-live-reload)
 How this all works:  If you want to, you can just watch the video linked above at leveluptuts.com. Or, if you're more of a reader than a watcher, I've recapped the video tutorials here, and added a few thoughts of my own. Keep in mind that I kind of named things differently, etc. so if you're trying to watch the video AND do these walkthroughs at the same time, you might get a bit confused. You don't need to grab all the files - the files for each branch are the completed lesson files. So unless you get stuck, you shouldn't need to snag everything, just read the README and follow along.
 
 ## 1. Setup
-Minor setup today. Just comment out that for loop we created in the previous lesson.
-Tip: if you're using WebStorm, the quickest way to comment out a block of code is to highlight it and hit CTRL+/
-Note that when you comment out something in the .scss file, it just doesn't process anything.  You won't get commented out css in your .css file - it just won't even output.
-```
-//@for $i from 1 through 4 {
-//  .par-#{$i} {
-//    margin:10px * $i;
-//  }
-//}
-```
+
+Download and install LiveReload from http://livereload.com  (which my brain is telling me is really liver eload.  just go with it.)
 
 
-## 2. Using For Loops
-We're going to do the same thing we did the last lesson, except this time we're going to use a while loop instead of a for loop.  First, we have to define the variable $i. We'll set it to 1.  Then we set the while condition ($i < 5), and we also need to manually increment $i as well.
+## 2. What is LiveReload?
 
-```
-$i : 1;
-@while $i < 5 {
-  .par-#{$i} {
-    margin: 10px * $i;
-  }
-  $i : $i + 1;
-}
-```
+From the (LiveReload web site)[http://livereload.com]
 
-You can see in your .css file that the output looks something like this, with $i replaced by the numbers 1-4 and the math done on the margins:
-```
-.par-1 {
-  margin: 10px;
-}
+> LiveReload monitors changes in the file system. As soon as you save a file, it is preprocessed as needed, and the browser is refreshed.
+> Even cooler, when you change a CSS file or an image, the browser is updated instantly without reloading the page.
 
-.par-2 {
-  margin: 20px;
-}
+## 3. Getting started with LiveReload
 
-.par-3 {
-  margin: 30px;
-}
+Open the app, and click the + button to add your scss directory to the watcher.
+Once you've added the scss directory, click on it.  To the right, you'll see some instructions.  You can either add a script before the </body> tag, or you can install the browser extensions.  I chose the (Chrome extension)[https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related?hl=en] route.
+Back in the LiveReload app, if you're using the alpha Windows version, click on the actions+files text and toggle on.  If you're using the Mac version, you might just want to watch the video this lesson - it looks a lot different.
 
-.par-4 {
-  margin: 40px;
-}
-```
+Also, since this is alpha, you'll have to change your html file to point to scss directory instead of css directory for your .css file.  Which is kind of painful, but will hopefully give you an idea of what liveReload will do in future versions.
 
-##2 Another example
-This time, let's replace that @each loop.  Comment out the @each we wrote before.
-```
-//@each $p in (
-//  one: red + 100,
-//  two: red + 50,
-//  three: red - 50,
-//  four: red - 100
-//) {
-//  .#{nth($p,1)} {
-//    background:#{nth($p,2)};
-//    @include border-radius(10px);
-//    padding:10px;
-//    color:text-contrast(nth($p,2));
-//  }
-//}
-```
+Now, change something in your scss file - and then check the browser.  Voila! It's already been compiled and refreshed in the browser.  Except it's not very useful yet, since you can't specify output directory in alpha for Windows.
 
-Let's add to the existing while loop we created. 
-We're going to add another variable for background, we'll call it a horrible name like parbg. In our while loop, we'll set our background color to parbg.
-We'll also set our color using the text-contrast function we wrote, and parbg for the color argument.
-Finally, we'll lighten parbg so that it's a little bit lighter next time through the loop.
+I spent a little bit of time looking around for a suitable alternative. Koala has a nice interface, and does the compile and lets you specify output directory and style, but doesn't have the automagic browser refresh. So, I guess it's either build your own, or wait for LiveReload to come out of alpha. 
 
-```
-$i : 1;
-$parbg : darkred;
-@while $i < 5 {
-  .par-#{$i} {
-    margin: 10px * $i;
-    background-color:$parbg;
-    color:text-contrast($parbg);
-    $parbg : lighten($parbg, 20%);
-    @include border-radius(10px);
-    padding:10px;
-  }
-  $i : $i + 1;
-}
-```
+
+
 
 ## Extras
-Think of a better way to use for loops than naming your paragraphs like this.  :P
+Find (or build!) a good replacement for LiveReload

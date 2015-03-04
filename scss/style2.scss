@@ -96,7 +96,7 @@ $icons: (twitter,facebook,youtube,rss);
 //}
 
 $i : 1;
-$parbg : darkred;
+$parbg : blue;
 @while $i < 5 {
   .par-#{$i} {
     margin: 10px * $i;

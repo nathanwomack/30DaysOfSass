@@ -1,3 +1,4 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000315}}
 body {
   color: grey;
   font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial;
@@ -5,34 +6,41 @@ body {
   margin: 0;
   padding: 0; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000322}}
 h1 {
   background-color: #137bee;
   color: white;
   padding: 5px;
   margin: 0 auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000328}}
 h2 {
   background-color: #00178a;
   color: white;
   padding: 3px;
   margin: 0 auto; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000334}}
 a {
   color: #00178a; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000337}}
 header {
   margin: 0 auto;
   width: 60%; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000341}}
 .content {
   width: 60%;
   margin: 0 auto;
   padding: 5px; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000345}}
   .content h2 {
     border-radius: 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     background-color: pink; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000348}}
   .content .intro, .content .feature {
     border-radius: 20px;
     -moz-border-radius: 20px;
@@ -40,21 +48,26 @@ header {
     background-color: rgba(255, 0, 0, 0.5);
     width: 38%;
     float: left; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000353}}
     .content .intro .paragraph1, .content .feature .paragraph1 {
       color: #137bee; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000355}}
       .content .intro .paragraph1 a, .content .feature .paragraph1 a {
         font-size: 16pt;
         font-weight: bold;
         color: magenta; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000360}}
       .content .intro .paragraph1 a:hover, .content .feature .paragraph1 a:hover {
         border-radius: 5px;
         -moz-border-radius: 5px;
         -webkit-border-radius: 5px;
         background: lightblue; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/_style\.scss}line{font-family:\0000366}}
   .content .feature {
     width: 62%;
     float: right; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000348}}
 .circle {
   font: 0/0 a;
   text-shadow: none;
@@ -66,9 +79,11 @@ header {
   height: 100px;
   width: 100px;
   background-color: #333; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000350}}
   .circle:hover {
     background: red; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000352}}
 .triangle {
   font: 0/0 a;
   text-shadow: none;
@@ -80,11 +95,14 @@ header {
   border-bottom: 50px solid transparent;
   border-left: 50px solid #333; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000354}}
 ul.socialLinks {
   display: block;
   overflow: hidden; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000357}}
   ul.socialLinks li {
     list-style: none; }
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000359}}
     ul.socialLinks li a {
       display: block;
       float: left;
@@ -92,60 +110,68 @@ ul.socialLinks {
       height: 32px;
       width: 32px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000371}}
 .twitter {
   background: url("../img/twitter.png") no-repeat;
   background-size: 32px;
   text-indent: -999px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000371}}
 .facebook {
   background: url("../img/facebook.png") no-repeat;
   background-size: 32px;
   text-indent: -999px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000371}}
 .youtube {
   background: url("../img/youtube.png") no-repeat;
   background-size: 32px;
   text-indent: -999px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\0000371}}
 .rss {
   background: url("../img/rss.png") no-repeat;
   background-size: 32px;
   text-indent: -999px; }
 
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\00003101}}
 .par-1 {
   margin: 10px;
-  background-color: darkred;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  padding: 10px;
-  color: #fff1f1; }
-
-.par-2 {
-  margin: 20px;
-  background-color: #f10000;
-  border-radius: 10px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  padding: 10px;
-  color: white; }
-
-.par-3 {
-  margin: 30px;
-  background-color: #ff5858;
+  background-color: blue;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   padding: 10px;
   color: black; }
 
-.par-4 {
-  margin: 40px;
-  background-color: #ffbebe;
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\00003101}}
+.par-2 {
+  margin: 20px;
+  background-color: #6666ff;
   border-radius: 10px;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
   padding: 10px;
-  color: #580000; }
+  color: black; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\00003101}}
+.par-3 {
+  margin: 30px;
+  background-color: #ccccff;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  color: #000066; }
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/yiddle\/Git\/30DaysOfSass\/scss\/style2\.scss}line{font-family:\00003101}}
+.par-4 {
+  margin: 40px;
+  background-color: white;
+  border-radius: 10px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  padding: 10px;
+  color: #000099; }
 
 /*# sourceMappingURL=style2.css.map */
