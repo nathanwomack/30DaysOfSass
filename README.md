@@ -23,7 +23,7 @@ From the (LiveReload web site)[http://livereload.com]
 ## 3. Getting started with LiveReload
 
 Open the app, and click the + button to add your scss directory to the watcher.
-Once you've added the scss directory, click on it.  To the right, you'll see some instructions.  You can either add a script before the '</body>' tag, or you can install the browser extensions.  I chose the (Chrome extension)[https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related?hl=en] route.
+Once you've added the scss directory, click on it.  To the right, you'll see some instructions.  You can either add a script before the `</body>` tag, or you can install the browser extensions.  I chose the (Chrome extension)[https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei/related?hl=en] route.
 Back in the LiveReload app, if you're using the alpha Windows version, click on the actions+files text and toggle on.  If you're using the Mac version, you might just want to watch the video this lesson - it looks a lot different.
 
 Also, since this is alpha, you'll have to change your html file to point to scss directory instead of css directory for your .css file.  Which is kind of painful, but will hopefully give you an idea of what liveReload will do in future versions.
