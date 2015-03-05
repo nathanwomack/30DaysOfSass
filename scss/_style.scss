@@ -67,5 +67,12 @@ header {
     @extend .intro;
     width: round(percentage(890px/1440px));
     float:right;
+    @extend %border;
   }
+}
+
+
+%border p {
+  border:1px solid white;
+  padding:5px;
 }
