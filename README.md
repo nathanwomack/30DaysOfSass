@@ -53,8 +53,3 @@ relative_assets = true
  
 ## 5. Extra
 Read up more about Compass and it's config options at http://compass-style.org/
-
- 
- Experiment with variable scope, and read up on media queries if you aren't familiar with them.
- 
- 
