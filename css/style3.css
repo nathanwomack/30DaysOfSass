@@ -8,13 +8,27 @@ body {
 body .main {
   background-color: #fff;
   margin: 0 auto;
-  width: 80%;
+  width: 960px;
 }
 body .main .header {
   background-color: #137bee;
   color: #fff;
   overflow: hidden;
   padding: 0 10px;
+}
+body .main .left-bar {
+  width: 23.40426%;
+  float: left;
+  margin-right: -100%;
+  margin-left: 0;
+  clear: none;
+}
+body .main .content {
+  width: 74.46809%;
+  float: right;
+  margin-left: 0;
+  margin-right: 0;
+  clear: none;
 }
 @media only screen and (max-width: 480px) {
   body .main {
