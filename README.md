@@ -44,7 +44,7 @@ Note: The video tutorials use the Singularity 1.0 syntax.  I've updated this wal
 @include add-gutter(1/3);
  ```
  
- In our index3.scss file, we're going to update our .main selector's width to 960px and add selectors for .left-bar and .content:
+ In our index3.scss file, we're going to update our .main selector's width to 960px and add selectors for .left-bar and .content.  We want the left-bar to be 3 columns wide, and start in the first grid position. We want the content div to be 9 columns wide and start in the 4th position.
  
  ```
 .main {
