@@ -50,7 +50,7 @@ Normally, we'd use an @import to import our _colors.scss partial, and we'd have 
 ```
 @import 'variables/*.*';
 ```
-Note: In the video tutorial, it suggests using 'variables/*', but that won't work on a Windows machine.  Use the *.* workaround if you are on Windows.
+Note: In the video tutorial, it suggests using ```'variables/*'```, but that won't work on a Windows machine.  Use the ```*.*``` workaround if you are on Windows.
 
 Now update your sass to use the new variables you've imported:
 ```
