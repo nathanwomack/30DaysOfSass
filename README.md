@@ -38,7 +38,7 @@ And let's create a new  empty style3.scss file in the scss directory.
 @content allows you to use a mixin that wraps a block of content.  It's useful for things like media queries for responsive design. To learn more about media queries, [visit this article on Google's developer portal](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries?hl=en)
 
 ## 3. Creating the mixin
-In style3.scss, let's create a mixin that contains a media query for phones with a screen smaller than 480px. Inside the media query, we're going to add @content.  The @content will allow you to wrap your sass around a block of code.
+In style3.scss, let's create a mixin that contains a media query for phones with a screen smaller than 480px. Inside the media query, we're going to add @content.  The @content will allow you to wrap your mixin around a block of code.
 
  ```
 @mixin phone {
@@ -125,7 +125,7 @@ body {
  You'll get a sass compiler error - Undefined variable: "$color"
  Instead of defining it inside the mixin, you need to define it outside with the sass that is using the mixin.
  
- ## 5. Extra
+## 5. Extra
  
  Experiment with variable scope, and read up on media queries if you aren't familiar with them.
  
