@@ -1,19 +1,23 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .main {
+  margin: 0 auto;
+  width: 80%;
+}
+body .main .header {
+  background-color: darkslateblue;
+  color: #fff;
+  overflow: hidden;
+  padding: 0 10px;
+}
+@media only screen and (max-width: 480px) {
   body .main {
-    margin: 0 auto;
-    width: 80%; }
-    body .main .header {
-      background-color: darkslateblue;
-      color: #fff;
-      overflow: hidden;
-      padding: 0 10px; }
-  @media only screen and (max-width: 480px) {
-    body .main {
-      width: 100%; }
-    body .content {
-      margin: 10px; } }
-
-/*# sourceMappingURL=style3.css.map */
+    width: 100%;
+  }
+  body .content {
+    margin: 10px;
+  }
+}

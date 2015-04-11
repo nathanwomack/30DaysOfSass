@@ -5,127 +5,55 @@
 
 Check the branches for each day
 
-# Day 20 [@Content - Better Media Queries in Sass](http://leveluptuts.com/tutorials/sass-tutorials/20-content-better-media-queries-sass)
+# Day 20 [Extending Sass and Writing a Compass Config File](http://leveluptuts.com/tutorials/sass-tutorials/21-extending-sass-and-writing-config-file)
 How this all works:  If you want to, you can just watch the video linked above at leveluptuts.com. Or, if you're more of a reader than a watcher, I've recapped the video tutorials here, and added a few thoughts of my own. Keep in mind that I kind of named things differently, etc. so if you're trying to watch the video AND do these walkthroughs at the same time, you might get a bit confused. You don't need to grab all the files - the files for each branch are the completed lesson files. So unless you get stuck, you shouldn't need to snag everything, just read the README and follow along.
 
 ## 1. Setup
-
-Our files are getting a bit muddy, so let's start over today. We're going to create a new html file in the project root, index3.html:
+First of all, if you haven't installed Compass yet, you'll need to do that.
+On the command line enter
 ```
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Sass!</title>
-    <link rel="stylesheet" href="css/style3.css">
-</head>
-<body>
-    <div class="main">
-        <div class="header">
-            <h1>RWD is a must!</h1>
-        </div>
-        <div class="content">
-            <p>In today's world of multiple devices, incorporating RWD is a must.</p>
-        </div>
-    </div>
-</body>
-</html>
+gem install compass
 ```
 
-And let's create a new  empty style3.scss file in the scss directory.
+It may take a few minutes to install.
 
-## 2. What is @content?
-@content allows you to use a mixin that wraps a block of content.  It's useful for things like media queries for responsive design. To learn more about media queries, [visit this article on Google's developer portal](https://developers.google.com/web/fundamentals/layouts/rwd-fundamentals/use-media-queries?hl=en)
+We can use the same files that we used in the last lesson, but before we start let's add a couple of things in the root of our project:
+* An empty config.rb file
+* A fonts directory
+* A js directory
 
-## 3. Creating the mixin
-In style3.scss, let's create a mixin that contains a media query for phones with a screen smaller than 480px. Inside the media query, we're going to add @content.  The @content will allow you to wrap your mixin around a block of code.
+## 2. What is Compass?
+Compass is a collection of mixins and tools that help us build sites easier. To learn more about Compass, visit http://compass-style.org/
+
+## 3. Building the Config File
+In config.rb, let's set up our configuration.  Our project_type is stand_alone. We set the http_path as the root of our project. We list out our directory paths to the scss, css, img, fonts, and js directories. We turn line comments off.  Because we are using .scss files, our preferred syntax is scss. We want the expanded style for our css output, and we set relative_assets to true to indicate that the compass helper functions should generate relative urls from the generated css to assets.  You can find a full list of config options at http://compass-style.org/help/documentation/configuration-reference/
 
  ```
-@mixin phone {
-  @media only screen and (max-width:480px) {
-    @content;
-  }
-}
+project_type = :stand_alone
+http_path = "/"
+sass_dir = "scss"
+css_dir = "css"
+images_dir = "img"
+fonts_dir = "fonts"
+javascripts_dir = "js"
+line_comments = false
+preferred_syntax = :scss
+output_style = :expanded
+relative_assets = true
  ```
  
- Let's use it now to make our mobile screen look different than our desktop screen.  For desktop, we only want our content to fill 80% of the screen, but on mobile, we want our content to fill the screen.  We also want to add just a bit of margin to the text content on the mobile.
+## 4. Start Up Compass and Test it Out
+ Now that we have Compass installed and configured, we're going to use that as our compiler.  We will no longer use "sass --watch scss:css" to turn on the watcher.
+ To test it out, delete all the .css files inside your css directory, then enter this on the command line:
  
  ```
-body {
-  margin:0;
-  padding:0;
-  font-family: Arial, Helvetica, sans-serif;
-  .main {
-    margin:0 auto;
-    width:80%;
-    .header {
-      background-color:darkslateblue;
-      color:#fff;
-      overflow:hidden;
-      padding:0 10px;
-    }
-  }
-  @include phone {
-    .main {
-      width:100%;
-    }
-    .content {
-      margin:10px;
-    }
-  }
-}
+ compass watch
  ```
- 
- Now when we compile, you'll see this new output.  You can see that the css we wrote inside the @phone include is now wrapped in the media query that the @content was wrapped in. Pretty cool, huh?  You can test out your css in the browser to see that your desktop view is different than your mobile view by reducing your browser size to less than 480px.
- 
- ```
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, Helvetica, sans-serif; }
-  body .main {
-    margin: 0 auto;
-    width: 80%; }
-    body .main .header {
-      background-color: darkslateblue;
-      color: #fff;
-      overflow: hidden;
-      padding: 0 10px; }
-  @media only screen and (max-width: 480px) {
-    body .main {
-      width: 100%; }
-    body .content {
-      margin: 10px; } }
- ```
- 
- 
-## 4. A note about scope
- Variable scope is at the level of the css you are calling the mixin, not from within the mixin itself.  That means you can't use any variables that you define inside the mixin.  They must be defined outside the mixin where you are calling it.
- 
- For example, if you did this and defined the color variable in your mixin:
- ```
- @mixin phone($color:red) {
-   @media only screen and (max-width:480px) {
-     @content;
-   }
- }
- ```
- And then tried to use that variable in the sass you are passing into @content like this:
- ```
-   @include phone {
-     .main {
-       width:100%;
-     }
-     .content {
-       margin:10px;
-       color:$color;
-     }
-   }
- ```
- You'll get a sass compiler error - Undefined variable: "$color"
- Instead of defining it inside the mixin, you need to define it outside with the sass that is using the mixin.
+ You'll see Compass regenerate your css files.  
  
 ## 5. Extra
+Read up more about Compass and it's config options at http://compass-style.org/
+
  
  Experiment with variable scope, and read up on media queries if you aren't familiar with them.
  
