@@ -1,4 +1,4 @@
-
+require 'singularitygs'
 require 'sass-globbing'
 
 
