@@ -13,22 +13,7 @@ You'll need to install Singularity.  It's another Ruby gem, so get to your comma
 ```
 gem install singularitygs
 ```
-We're also going to create a new directory inside the scss directory called variables.
-In it, we'll create a scss partial called _colors.scss, where we'll place some color variables
-```
-$background-color: #fff;
-$text-color: #333;
-$link-color: #137bee;
-$h1-color: #fff;
-$h1-background-color: #137bee;
-```
-And one called _typography.scss, where we'll place some variables for text
-```
-$body-text-size: 14px;
-$body-text-font: Arial, Helvetica, san-serif;
-$h1-text-size: 20px;
-```
-We'll be using our index3.html and style3.scss files we used in the last lesson as well.
+We'll be using our index3.html and style3.scss files we used in the last lesson.
 
 ## 2. What is Singularity?
 Singularity is a flexible grid system that you can use with Sass.  You can find out more at the [Singularity Wiki](https://github.com/at-import/Singularity/wiki)
