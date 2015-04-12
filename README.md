@@ -9,7 +9,7 @@ Check the branches for each day
 How this all works:  If you want to, you can just watch the video linked above at leveluptuts.com. Or, if you're more of a reader than a watcher, I've recapped the video tutorials here, and added a few thoughts of my own. Keep in mind that I kind of named things differently, etc. so if you're trying to watch the video AND do these walkthroughs at the same time, you might get a bit confused. You don't need to grab all the files - the files for each branch are the completed lesson files. So unless you get stuck, you shouldn't need to snag everything, just read the README and follow along.
 
 ## 1. Setup
-We're going to modify our html file a little so we have some content to put into the grid:
+We're going to modify our html file a little. We're going to remove the first div containing text, and duplicate the second one so that we have five of them. Then we're going to add a unique class to each one. In this case, the class names are one, two, three, four, and five.
 
 ```
 <body>
@@ -17,10 +17,23 @@ We're going to modify our html file a little so we have some content to put into
         <div class="header">
             <h1>Singularity is Sweet!</h1>
         </div>
-        <div class="left-bar">
-            <p>Jelly beans donut cotton candy tootsie roll. Cupcake croissant chocolate bar jujubes. </p>
+        <div class="one">
+            <p>Jelly beans donut cotton candy tootsie roll. Cupcake croissant chocolate bar jujubes. Jelly beans sweet liquorice oat cake halvah. Cookie cake soufflé tiramisu. Powder lemon drops sweet roll cake biscuit gingerbread dessert. Carrot cake lemon drops pie sweet sweet roll chocolate cake.</p>
+            <p>Topping ice cream dessert danish chocolate cake jelly beans cotton candy pastry gingerbread. Cake gingerbread apple pie apple pie tart tart gummi bears. Cotton candy oat cake jelly gummies pie. Cookie chocolate bar sweet chocolate cake icing macaroon donut fruitcake macaroon. Carrot cake jelly beans biscuit gummies. Soufflé cheesecake jujubes. Croissant sweet roll cake dragée jujubes cheesecake jelly tiramisu. Jelly bonbon caramels brownie croissant apple pie dessert.</p>
         </div>
-        <div class="content">
+        <div class="two">
+            <p>Jelly beans donut cotton candy tootsie roll. Cupcake croissant chocolate bar jujubes. Jelly beans sweet liquorice oat cake halvah. Cookie cake soufflé tiramisu. Powder lemon drops sweet roll cake biscuit gingerbread dessert. Carrot cake lemon drops pie sweet sweet roll chocolate cake.</p>
+            <p>Topping ice cream dessert danish chocolate cake jelly beans cotton candy pastry gingerbread. Cake gingerbread apple pie apple pie tart tart gummi bears. Cotton candy oat cake jelly gummies pie. Cookie chocolate bar sweet chocolate cake icing macaroon donut fruitcake macaroon. Carrot cake jelly beans biscuit gummies. Soufflé cheesecake jujubes. Croissant sweet roll cake dragée jujubes cheesecake jelly tiramisu. Jelly bonbon caramels brownie croissant apple pie dessert.</p>
+        </div>
+        <div class="three">
+            <p>Jelly beans donut cotton candy tootsie roll. Cupcake croissant chocolate bar jujubes. Jelly beans sweet liquorice oat cake halvah. Cookie cake soufflé tiramisu. Powder lemon drops sweet roll cake biscuit gingerbread dessert. Carrot cake lemon drops pie sweet sweet roll chocolate cake.</p>
+            <p>Topping ice cream dessert danish chocolate cake jelly beans cotton candy pastry gingerbread. Cake gingerbread apple pie apple pie tart tart gummi bears. Cotton candy oat cake jelly gummies pie. Cookie chocolate bar sweet chocolate cake icing macaroon donut fruitcake macaroon. Carrot cake jelly beans biscuit gummies. Soufflé cheesecake jujubes. Croissant sweet roll cake dragée jujubes cheesecake jelly tiramisu. Jelly bonbon caramels brownie croissant apple pie dessert.</p>
+        </div>
+        <div class="four">
+            <p>Jelly beans donut cotton candy tootsie roll. Cupcake croissant chocolate bar jujubes. Jelly beans sweet liquorice oat cake halvah. Cookie cake soufflé tiramisu. Powder lemon drops sweet roll cake biscuit gingerbread dessert. Carrot cake lemon drops pie sweet sweet roll chocolate cake.</p>
+            <p>Topping ice cream dessert danish chocolate cake jelly beans cotton candy pastry gingerbread. Cake gingerbread apple pie apple pie tart tart gummi bears. Cotton candy oat cake jelly gummies pie. Cookie chocolate bar sweet chocolate cake icing macaroon donut fruitcake macaroon. Carrot cake jelly beans biscuit gummies. Soufflé cheesecake jujubes. Croissant sweet roll cake dragée jujubes cheesecake jelly tiramisu. Jelly bonbon caramels brownie croissant apple pie dessert.</p>
+        </div>
+        <div class="five">
             <p>Jelly beans donut cotton candy tootsie roll. Cupcake croissant chocolate bar jujubes. Jelly beans sweet liquorice oat cake halvah. Cookie cake soufflé tiramisu. Powder lemon drops sweet roll cake biscuit gingerbread dessert. Carrot cake lemon drops pie sweet sweet roll chocolate cake.</p>
             <p>Topping ice cream dessert danish chocolate cake jelly beans cotton candy pastry gingerbread. Cake gingerbread apple pie apple pie tart tart gummi bears. Cotton candy oat cake jelly gummies pie. Cookie chocolate bar sweet chocolate cake icing macaroon donut fruitcake macaroon. Carrot cake jelly beans biscuit gummies. Soufflé cheesecake jujubes. Croissant sweet roll cake dragée jujubes cheesecake jelly tiramisu. Jelly bonbon caramels brownie croissant apple pie dessert.</p>
         </div>
@@ -29,46 +42,53 @@ We're going to modify our html file a little so we have some content to put into
 ```
 
 ## 2. Why Asymmetrical Grids?
-In the last lesson, we built a 12 column grid, but we really only had two elements - one that spanned 3 columns and one that spanned 9.  So what was the point of setting up all 12 columns? In this lesson, we'll learn how to use Asymmetrical Grids so that we aren't creating columns we won't really use.
+In the last lesson, we built a 12 column grid, but we really only had two elements - one that spanned 3 columns and one that spanned 9.  So what was the point of setting up all 12 columns? In this lesson, we'll learn how to use Asymmetrical Grids so that we aren't creating columns we don't really need.
 
 ## 3. Setting Up the Grid
-In the variables directory, create a new partial called _grid.scss.  We'll add some grid variables to this file. We want 12 columns in our grid, so we will set a $grids variable to 12. 
+In your _grid.scss file, we're going to modify the add-grid. This time, we're going to do five columns. The first is 1 grid wide, the second is 2 grids wide, and so on.  
 
-Singularity helps you build gutters between your columns.  It's important to note that Singularity doesn't add gutters to the far left or the far right of the outside of your grid. We want the gutters for each of our columns to total up to 1/3 of the column width.  If we have a 960px grid, each column will be 60px. 1/3 of 60px is 20px, and that's split between the left and right gutter for each column, so our gutters will end up being 10px wide.
-
-Note: The video tutorials use the Singularity 1.0 syntax.  I've updated this walkthrough to use the Singularity 1.2+ syntax, which is slightly different.  As of the date of this tutorial, both syntaxes will work. https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids 
+Note: The video tutorials use the Singularity 1.0 syntax.  I've updated this walkthrough to use the Singularity 1.2+ syntax, which is slightly different.  As of the date of this tutorial, both syntaxes will work. 
 
  ```
-@include add-grid(12);
-@include add-gutter(1/3);
+@include add-grid(1 2 3 4 5);
  ```
  
- In our index3.scss file, we're going to update our .main selector's width to 960px and add selectors for .left-bar and .content.  We want the left-bar to be 3 columns wide, and start in the first grid position. We want the content div to be 9 columns wide and start in the 4th position.
+ In our index3.scss file, we're going to update our .main selector's width to 1440px and add selectors for our one through five classes. 
+ The grid-span takes two numbers.  The first is the number of columns wide, the second is which position it should start at.
  
  ```
 .main {
     background-color: $background-color;
     margin:0 auto;
-    width:960px;
+    width:1440px;
     .header {
       background-color:$h1-background-color;
       color:$h1-color;
       overflow:hidden;
       padding:0 10px;
     }
-    .left-bar {
-      @include grid-span(3, 1);
+    .one {
+      @include grid-span(1, 1);
     }
-    .content {
-      @include grid-span(9, 4)
+    .two {
+      @include grid-span(1, 2);
     }
-}
+    .three {
+      @include grid-span(1, 3);
+    }
+    .four {
+      @include grid-span(1, 4);
+    }
+    .five {
+      @include grid-span(1, 5);
+    }
+  }
  ```
  
- Now when you refresh your html in a browser, you should see two columns of content.
+ Now when you refresh your html in a browser, you should see five columns of content, and they should get wider as they go across.  
  
  Note: You will probably see a warning in the watcher that lets you know that you'll need Breakpoint for responsive contexts.  This grid isn't responsive, but we'll cover Breakpoints in a future lesson.
  
 
 ## 4. Extra
-Check out the [Singularity Wiki for more info on Symmetrical Grids](https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids).  
+Check out the [Singularity Wiki for more info on Asymmetrical Grids](https://github.com/at-import/Singularity/wiki/Creating-Grids#asymmetric-grids).  
