@@ -5,7 +5,7 @@
 
 Check the branches for each day
 
-# Day 20 [Creating and Using Symmetrical Grid with Singularity](http://leveluptuts.com/tutorials/sass-tutorials/24-creating-and-using-symmetrical-grid)
+# Day 20 [Asymmetric Grids with Singularity](http://leveluptuts.com/tutorials/sass-tutorials/25-asymmetric-grids)
 How this all works:  If you want to, you can just watch the video linked above at leveluptuts.com. Or, if you're more of a reader than a watcher, I've recapped the video tutorials here, and added a few thoughts of my own. Keep in mind that I kind of named things differently, etc. so if you're trying to watch the video AND do these walkthroughs at the same time, you might get a bit confused. You don't need to grab all the files - the files for each branch are the completed lesson files. So unless you get stuck, you shouldn't need to snag everything, just read the README and follow along.
 
 ## 1. Setup
@@ -28,9 +28,8 @@ We're going to modify our html file a little so we have some content to put into
 </body>
 ```
 
-## 2. What is Singularity?
-Singularity is a flexible grid system that you can use with Sass.  You can find out more at the [Singularity Wiki](https://github.com/at-import/Singularity/wiki)
-Today, we'll be using Singularity to create a basic 960 grid.  It won't be responsive, but it will give you a basic idea of what Singularity can do.
+## 2. Why Asymmetrical Grids?
+In the last lesson, we built a 12 column grid, but we really only had two elements - one that spanned 3 columns and one that spanned 9.  So what was the point of setting up all 12 columns? In this lesson, we'll learn how to use Asymmetrical Grids so that we aren't creating columns we won't really use.
 
 ## 3. Setting Up the Grid
 In the variables directory, create a new partial called _grid.scss.  We'll add some grid variables to this file. We want 12 columns in our grid, so we will set a $grids variable to 12. 
