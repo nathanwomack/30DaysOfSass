@@ -1,3 +1,4 @@
+@import 'breakpoint';
 @import 'singularitygs';
 @import 'variables/**/*.*';
 
@@ -16,27 +17,12 @@ body {
   .main {
     background-color: $background-color;
     margin:0 auto;
-    width:1440px;
+    width:80%;
     .header {
       background-color:$h1-background-color;
       color:$h1-color;
       overflow:hidden;
       padding:0 10px;
-    }
-    .one {
-      @include grid-span(1, 1);
-    }
-    .two {
-      @include grid-span(1, 2);
-    }
-    .three {
-      @include grid-span(1, 3);
-    }
-    .four {
-      @include grid-span(1, 4);
-    }
-    .five {
-      @include grid-span(1, 5);
     }
   }
   @include phone {
@@ -46,5 +32,14 @@ body {
     .content {
       margin:10px;
     }
+  }
+}
+
+@include breakpoint (480px) {
+  .left-bar {
+    @include grid-span(1, 1);
+  }
+  .content {
+    @include grid-span(1, 2);
   }
 }
