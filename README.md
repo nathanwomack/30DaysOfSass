@@ -35,7 +35,7 @@ Today, we'll be using Singularity to create a basic 960 grid.  It won't be respo
 ## 3. Setting Up the Grid
 In the variables directory, create a new partial called _grid.scss.  We'll add some grid variables to this file. We want 12 columns in our grid, so we will set a $grids variable to 12. 
 
-Singularity helps you build gutters between your columns.  It's important to note that Singularity doesn't add gutters to the far left or the far right of the outside of your grid. We want the gutters for each of our columns to total up to 1/3 of the column width.  If we have a 960px grid, each column will be 60px. 1/3 of 60px is 20px, and that's split between the left and right gutter for each column, so our gutters will end up being 10px wide.
+Singularity helps you build gutters between your columns.  It's important to note that Singularity doesn't add gutters to the far left or the far right of the outside of your grid. We want the gutters for each of our columns to total up to 1/3 of the column width.  If we have a 960px grid, each column will end up being 60px. 1/3 of 60px is 20px, and that's split between the left and right gutter for each column, so our gutters will end up being 10px wide. The math is explained a little better in the link below.
 
 Note: The video tutorials use the Singularity 1.0 syntax.  I've updated this walkthrough to use the Singularity 1.2+ syntax, which is slightly different.  As of the date of this tutorial, both syntaxes will work. https://github.com/at-import/Singularity/wiki/Creating-Grids#symmetric-grids 
 
