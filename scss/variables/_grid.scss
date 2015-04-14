@@ -1,2 +1,5 @@
-@include add-grid(3 9);
+@include add-grid(1);
+@include add-grid(3 9 at 768px);
+@include add-grid(2 6 4 at 1140px);
+
 @include add-gutter(1/3);

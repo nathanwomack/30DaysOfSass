@@ -24,6 +24,19 @@ body {
       overflow:hidden;
       padding:0 10px;
     }
+    .offer {
+      height:200px;
+      background-color:lightblue;
+      margin:5px 0;
+      overflow:hidden;
+      p {
+        color:lighten(lightblue, 10);
+        font-weight:bold;
+        font-size:1.5em;
+        margin:40px;
+        text-align:center;
+      }
+    }
   }
   @include phone {
     .main {
@@ -34,12 +47,25 @@ body {
     }
   }
 }
-
-@include breakpoint (480px) {
+@include breakpoint (768px) {
   .left-bar {
     @include grid-span(1, 1);
   }
   .content {
     @include grid-span(1, 2);
+  }
+  .offers {
+    @include grid-span(1, 2);
+  }
+}
+@include breakpoint (1140px) {
+  .left-bar {
+    @include grid-span(1, 1);
+  }
+  .content {
+    @include grid-span(1, 2);
+  }
+  .offers {
+    @include grid-span(1, 3);
   }
 }

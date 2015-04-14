@@ -16,6 +16,19 @@ body .main .header {
   overflow: hidden;
   padding: 0 10px;
 }
+body .main .offer {
+  height: 200px;
+  background-color: lightblue;
+  margin: 5px 0;
+  overflow: hidden;
+}
+body .main .offer p {
+  color: #d4ebf2;
+  font-weight: bold;
+  font-size: 1.5em;
+  margin: 40px;
+  text-align: center;
+}
 @media only screen and (max-width: 480px) {
   body .main {
     width: 100%;
@@ -25,7 +38,7 @@ body .main .header {
   }
 }
 
-@media (min-width: 480px) {
+@media (min-width: 768px) {
   .left-bar {
     width: 24.32432%;
     float: left;
@@ -36,6 +49,39 @@ body .main .header {
 
   .content {
     width: 72.97297%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+
+  .offers {
+    width: 72.97297%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+  }
+}
+@media (min-width: 1140px) {
+  .left-bar {
+    width: 15.78947%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0;
+    clear: none;
+  }
+
+  .content {
+    width: 47.36842%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 18.42105%;
+    clear: none;
+  }
+
+  .offers {
+    width: 31.57895%;
     float: right;
     margin-left: 0;
     margin-right: 0;
