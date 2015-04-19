@@ -69,3 +69,16 @@ body {
     @include grid-span(1, 3);
   }
 }
+
+#{selector-append(('.btn','.header'),'-link')} {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+#{selector-nest('.btn, .header', '.link')}{
+  color:red;
+}
+
+#{selector-unify('.btn, .header', '.link')}{
+  color:red;
+}

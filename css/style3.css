@@ -88,3 +88,15 @@ body .main .offer p {
     clear: none;
   }
 }
+.btn-link, .header-link {
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+
+.btn .link, .header .link {
+  color: red;
+}
+
+.btn.link, .header.link {
+  color: red;
+}
