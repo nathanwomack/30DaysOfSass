@@ -1,6 +1,8 @@
+@import '../bower_components/juice/dist/juice';
 @import 'breakpoint';
 @import 'singularitygs';
 @import 'variables/**/*.*';
+
 
 @mixin phone($color:red) {
   @media only screen and (max-width:480px) {
@@ -15,7 +17,10 @@ body {
   font-size: $body-text-size;
   color: $text-color;
   .main {
-    background-color: $background-color;
+    @include bp(small) {
+      background-color: #333;
+      color: lightblue;
+    }
     margin:0 auto;
     width:80%;
     .header {
@@ -23,6 +28,7 @@ body {
       color:$h1-color;
       overflow:hidden;
       padding:0 10px;
+      @include border-top-radius(15px);
     }
     .offer {
       height:200px;
@@ -36,6 +42,14 @@ body {
         margin:40px;
         text-align:center;
       }
+    }
+    .left-bar {
+      color:#fff;
+      background-color: navy;
+      border-radius: 10px;
+      padding:10px;
+      margin-top:10px;
+      @include rotate(-15deg);
     }
   }
   @include phone {
