@@ -5,76 +5,52 @@
 
 Check the branches for each day
 
-# Day 20 [Juice - Mixins for Life](http://leveluptuts.com/tutorials/sass-tutorials/29-juice-mixins-life)
+# Day 20 [Juice - Mixins for Life Part 2](http://leveluptuts.com/tutorials/sass-tutorials/30-juice-mixins-life-part-2)
 How this all works:  If you want to, you can just watch the video linked above at leveluptuts.com. Or, if you're more of a reader than a watcher, I've recapped the video tutorials here, and added a few thoughts of my own. Keep in mind that I kind of named things differently, etc. so if you're trying to watch the video AND do these walkthroughs at the same time, you might get a bit confused. You don't need to grab all the files - the files for each branch are the completed lesson files. So unless you get stuck, you shouldn't need to snag everything, just read the README and follow along.
 
 ## 1. Setup
-You'll need to install Juice. If you're using Bower, you can do that from the command line:
+No setup this time, just use the files you used in the last lesson.
+
+## 2. Hoverer
+Hoverer is a mixin that lets you pass in the property you want to change on hover, the initial value, and the hover value.  Let's make our left-bar element change background color on hover. Easy!
 
 ```
-bower install juice
+@include hoverer(background-color, navy, hotpink);
 ```
 
-If you're not using Bower, you should check it out. It will make your life considerably easier :) 
-If you're not using Bower and you don't want to figure that out right now, you can also clone the Juice repo: 
+## 3. Responsive
+Juice also has a really easy way to set different values for properties at different breakpoints. We should note that Juice is different than Singularity in that it doesn't consider mobile first.  The arguments in this mixin are:  property, base size value, medium size value, small size value. Let's use it to make our .header background get darker as our screen gets smaller.
 
 ```
-git clone git@github.com:kjbrum/juice.git
+.header {
+    @include responsive(background-color, dodgerblue, navy, black);
+}
 ```
 
-In style3.scss, you'll also want to import juice. If you used Bower, your import will look like this:
 
+## 4. Centerer, vert-centerer, cover
+Centerer will center an element vertically and horizontally. Let's try this on our p elements in our offer elements. 
+First, we need to put a position on our offer class, since centerer uses absolute positioning - otherwise they'll all end up stacked in the center of our screen.  Then we'll add centerer to center vertically and horizontally.  We also need to wipe out margin, otherwise it will be a little off center.
 ```
-@import '/bower_components/juice/dist/juice';
-```
-
-If you didn't use bower, just update the path to wherever you placed the _juice.scss file.
-
-IMPORTANT NOTE: You may want to make sure that you add your import line *before* the import for Singularity.  On my project, I started getting errors if it was below the Singularity import.
-
-## 2. What is Juice?
-Juice is a collection of mixins designed to make your life easier. To learn more about Juice, visit http://juicynex.us/juice/.
-
-## 3. Juice Breakpoints
-Juice has a really nice mixin for breakpoints that even contains some presets. Just as an example, let's set a breakpoint that changes the background color for small screens.
-In style3.scss, inside the .main selector, replace the background-color rule with the bp mixin and pass the argument small:
-
-```
-  .main {
-    @include bp(small) {
-      background-color: #333;
-      color: lightblue;
-    }
+.offer {
+  height:200px;
+  background-color:lightblue;
+  margin:5px 0;
+  overflow:hidden;
+  position:relative;
+  p {
+    color:lighten(lightblue, 10);
+    font-weight:bold;
+    font-size:1.5em;
+    margin:0;
+    padding:0;
+    @include centerer;
   }
+}
 ```
 
-
-## 4. Single Side Border Radius
-This mixin is pretty useful. It allows you to do a single side border radius in just one line. You can do top, bottom, left or right. Try it out on your .header selector:
-
-```
-    .header {
-      /* existing css here */
-      @include border-top-radius(15px);
-    }
-```
+Centerer-vert does the same thing for vertical centering, and coverer will force an element to cover the entire screen or parent element.
 
 
-## 5. Single Transform
-
-There are a number of shortcut mixins for transforms. As an example, let's throw a quick rotate on our left-bar class. This would be handy for throwing a "new" banner across the corner of a tile.
-Other available shortcut transform mixins are: rotate, rotateX, rotateY, rotateZ, rotate3d, scale, scaleX, scaleY, scaleZ, scale3d, skew, skewX, skewY, translate, translateX, translateY, translateZ, translate3d
-```
-.left-bar {
-      color:#fff;
-      background-color: navy;
-      border-radius: 10px;
-      padding:10px;
-      margin-top:10px;
-      @include rotate(-15deg);
-    }
-```
-
-
-## 6. Extra
-Find out more about Juice at http://juicynex.us/juice/
+## 5. Extra
+There are lots more mixins, helpers and functions that you can learn more about at http://juicynex.us/juice/.  Some are super useful, and some really aren't, but I'd encourage you to go check them all out.

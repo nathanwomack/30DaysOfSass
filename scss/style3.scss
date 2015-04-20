@@ -16,6 +16,7 @@ body {
   font-family: $body-text-font;
   font-size: $body-text-size;
   color: $text-color;
+  position:relative;
   .main {
     @include bp(small) {
       background-color: #333;
@@ -24,7 +25,7 @@ body {
     margin:0 auto;
     width:80%;
     .header {
-      background-color:$h1-background-color;
+      @include responsive(background-color, dodgerblue, navy, black);
       color:$h1-color;
       overflow:hidden;
       padding:0 10px;
@@ -35,17 +36,18 @@ body {
       background-color:lightblue;
       margin:5px 0;
       overflow:hidden;
+      position:relative;
       p {
         color:lighten(lightblue, 10);
         font-weight:bold;
         font-size:1.5em;
-        margin:40px;
-        text-align:center;
+        margin:0;
+        @include centerer;
       }
     }
     .left-bar {
       color:#fff;
-      background-color: navy;
+      @include hoverer(background-color, navy, hotpink);
       border-radius: 10px;
       padding:10px;
       margin-top:10px;

@@ -4,6 +4,7 @@ body {
   font-family: Arial, Helvetica, san-serif;
   font-size: 14px;
   color: #333;
+  position: relative;
 }
 body .main {
   margin: 0 auto;
@@ -16,25 +17,39 @@ body .main {
   }
 }
 body .main .header {
-  background-color: #137bee;
+  background-color: dodgerblue;
   color: #fff;
   overflow: hidden;
   padding: 0 10px;
   border-top-right-radius: 15px;
   border-top-left-radius: 15px;
 }
+@media only screen and (max-width: 64em) {
+  body .main .header {
+    background-color: navy;
+  }
+}
+@media only screen and (max-width: 40em) {
+  body .main .header {
+    background-color: black;
+  }
+}
 body .main .offer {
   height: 200px;
   background-color: lightblue;
   margin: 5px 0;
   overflow: hidden;
+  position: relative;
 }
 body .main .offer p {
   color: #d4ebf2;
   font-weight: bold;
   font-size: 1.5em;
-  margin: 40px;
-  text-align: center;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 body .main .left-bar {
   color: #fff;
@@ -43,6 +58,9 @@ body .main .left-bar {
   padding: 10px;
   margin-top: 10px;
   transform: rotate(-15deg);
+}
+body .main .left-bar:hover {
+  background-color: hotpink;
 }
 @media only screen and (max-width: 480px) {
   body .main {
